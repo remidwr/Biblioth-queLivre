@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="8d2d8d52-1c5b-4593-840d-a9866e55b14d" ChangeDateTime="07/29/2020 13:47:50">
+    <Property Name="ElementName" Value="[dbo].[Facturation].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Facturation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Rue" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3addaec5-405a-4105-ade1-6fd6436a72ea" ChangeDateTime="07/29/2020 13:54:09">
+    <Property Name="ElementName" Value="[dbo].[MTM_UtilisateurCommande].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_UtilisateurCommande]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID_User" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f997f280-15d4-4555-992f-53710201a766" ChangeDateTime="07/29/2020 13:56:03">
+    <Property Name="ElementName" Value="[dbo].[MTM_UtilisateurCommande].[ID_User]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_UtilisateurCommande]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_User" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="396223f3-f753-43f0-91aa-3a9f4e0a7032" ChangeDateTime="07/29/2020 13:56:11">
+    <Property Name="ElementName" Value="[dbo].[MTM_UtilisateurCommande].[ID_Commande]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_UtilisateurCommande]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_Commande" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="edde1088-b59d-48f0-a63a-9a4dd394d8c7" ChangeDateTime="07/29/2020 14:02:29">
+    <Property Name="ElementName" Value="[dbo].[Livres].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Livres]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5598a4e4-291d-437c-bd10-060d2ee31ab5" ChangeDateTime="07/29/2020 14:04:13">
+    <Property Name="ElementName" Value="[dbo].[Books].[Auteur]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Books]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Author" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6d6c991-5361-4e55-be7e-d5aeaaabd188" ChangeDateTime="07/29/2020 14:17:14">
+    <Property Name="ElementName" Value="[dbo].[MTM_UsersCommand].[Id_Commande]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_UsersCommand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_Command" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="546879c7-d0cd-4f98-ad8a-ac0c5efc42a5" ChangeDateTime="07/29/2020 14:19:54">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksCommand].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksCommand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e430530d-be68-4f09-8e3d-f54f363df059" ChangeDateTime="07/29/2020 14:20:13">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksCommand].[ISBN]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksCommand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN_Books" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1e0b2983-9d3c-42b1-ac54-437c0b62150a" ChangeDateTime="07/29/2020 14:21:01">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksCommand].[ID_Command]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksCommand]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id_Command" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="59b3ef76-5d0b-4de9-8fb3-5f2d9d082f29" ChangeDateTime="07/29/2020 14:37:27">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksAuthor].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksAuthor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dd86b883-e7b5-414a-b1b2-5a163f2b18d6" ChangeDateTime="07/29/2020 14:40:08">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksAuthor].[ISBN]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksAuthor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN_Books" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="419b388b-4f21-4a91-8e3e-7a4efb82388d" ChangeDateTime="07/29/2020 14:44:09">
+    <Property Name="ElementName" Value="[dbo].[HistoricPayment].[Total]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HistoricPayment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TotalPrice" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="148e1dc6-ad0a-4e1c-9006-8806ef8f480f" ChangeDateTime="07/29/2020 14:49:07">
+    <Property Name="ElementName" Value="[dbo].[HistoricPayment].[TotalPrice]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HistoricPayment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Total" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2de3e675-a82e-4485-ae4f-063efb023b74" ChangeDateTime="07/29/2020 14:54:37">
+    <Property Name="ElementName" Value="[dbo].[MTM_BooksCategory].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MTM_BooksCategory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN_Books" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0097c45c-350a-43a9-b705-9ebbc1f1d4ca" ChangeDateTime="07/30/2020 11:29:12">
+    <Property Name="ElementName" Value="[dbo].[Command].[Statut]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Command]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Status" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6cc1159-6d6a-40bf-bf61-fd4c8bce187a" ChangeDateTime="07/30/2020 11:51:13">
+    <Property Name="ElementName" Value="[dbo].[AK_Author_Name]" />
+    <Property Name="ElementType" Value="SqlUniqueConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Author]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[UK_Author_Name]" />
+  </Operation>
+</Operations>
