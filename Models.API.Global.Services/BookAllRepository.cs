@@ -1,5 +1,4 @@
 ﻿using Models.API.Global.Entities;
-using Models.API.Global.Services.Extensions;
 using Models.API.Global.Services.Mappers;
 using Models.API.Interfaces;
 using System;
@@ -10,16 +9,16 @@ using Tools.Database;
 
 namespace Models.API.Global.Services
 {
-    public class BookRepository : IBookRepository
+    public class BookAllRepository : IBookAllRepository
     {
         private Connection _connection;
 
-        public BookRepository(Connection connection)
+        public BookAllRepository(Connection connection)
         {
             _connection = connection;
         }
 
-        public IEnumerable<Book> Get()
+        public IEnumerable<BookAll> Get()
         {
             Command command = new Command(
                 "SELECT B.ISBN, B.[Name] as BookName, A.[Name] as AuthorName, C.[Name] as CategoryName, B.Price, B.[Description], B.[Image], B.Edition, B.Stock " +
@@ -30,10 +29,10 @@ namespace Models.API.Global.Services
                 "JOIN Category C ON BC.Id_Category = C.Id;"
                 );
 
-            return _connection.ExecuteReader(command, dr => dr.ToBook());
+            return _connection.ExecuteReader(command, dr => dr.ToBookAll());
         }
 
-        public Book Get(string ISBN)
+        public BookAll Get(string ISBN)
         {
             Command command = new Command(
                 "SELECT B.ISBN, B.[Name] as BookName, A.[Name] as AuthorName, C.[Name] as CategoryName, B.Price, B.[Description], B.[Image], B.Edition, B.Stock " +
@@ -46,7 +45,7 @@ namespace Models.API.Global.Services
                 );
             command.AddParameter("ISBN", ISBN);
 
-            return _connection.ExecuteReader(command, dr => dr.ToBook()).SingleOrDefault();
+            return _connection.ExecuteReader(command, dr => dr.ToBookAll()).SingleOrDefault();
         }
 
         public void Insert(Book book, Author author, Category category)
@@ -61,22 +60,11 @@ namespace Models.API.Global.Services
             command.AddParameter("Stock", book.Stock);
             command.AddParameter("AuthorName", author.Name);
             command.AddParameter("CategoryName", category.Name);
-
-            _connection.ExecuteNonQuery(command);
         }
 
         public void Update(string ISBN, Book book)
         {
-            Command command = new Command("UpdateBook", true);
-            command.AddParameter("ISBN", ISBN);
-            command.AddParameter("Name", book.Name);
-            command.AddParameter("Price", book.Price);
-            command.AddParameter("Description", book.Description);
-            command.AddParameter("Image", book.Image);
-            command.AddParameter("Edition", book.Description);
-            command.AddParameter("Stock", book.Stock);
-
-            _connection.ExecuteNonQuery(command);
+            throw new NotImplementedException();
         }
     }
 }

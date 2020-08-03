@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Models.API.Interfaces
 {
-    public interface IBookRepository
+    public interface IBookAllRepository
     {
-        IEnumerable<Book> Get();
-        Book Get(string ISBN);
+        IEnumerable<BookAll> Get();
+        BookAll Get(string ISBN);
         void Insert(Book book, Author author, Category category);
         void Update(string ISBN, Book book);
     }
