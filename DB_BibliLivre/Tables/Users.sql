@@ -11,5 +11,6 @@
     [Passwd] BINARY(64) NOT NULL, 
     [Phone] NVARCHAR(50) NULL, 
     [IsAdmin] BIT NOT NULL, 
-    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]) 
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]), 
+    CONSTRAINT [UK_Users_Email] UNIQUE ([Email]) 
 )

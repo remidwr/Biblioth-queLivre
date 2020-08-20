@@ -7,6 +7,9 @@
     @UserID INT
 AS
 BEGIN
-	INSERT INTO Billing (Street, Number, Box, ZipCode, City, UserId)
-    VALUES (@Street, @Number, @Box, @ZipCode, @City, @UserID);
+    IF((SELECT Id FROM Users WHERE Id = @UserID) is not null)
+        BEGIN
+	        INSERT INTO Billing (Street, Number, Box, ZipCode, City, UserId)
+            VALUES (@Street, @Number, @Box, @ZipCode, @City, @UserID);
+        END
 END

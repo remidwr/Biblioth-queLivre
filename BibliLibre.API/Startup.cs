@@ -15,8 +15,10 @@ namespace BibliLibre.API
 {
     public class Startup
     {
+        private string connection { get; set; }
         public Startup(IConfiguration configuration)
         {
+            connection = configuration.GetConnectionString("Default");
             Configuration = configuration;
         }
 
@@ -25,6 +27,7 @@ namespace BibliLibre.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(connection);
             services.AddControllers();
         }
 

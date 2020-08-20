@@ -65,6 +65,7 @@
     <Folder Include="Procedures\Billing" />
     <Folder Include="Scripts" />
     <Folder Include="Procedures\Category" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
@@ -78,16 +79,15 @@
     <Build Include="Functions\GetPostSalt.sql" />
     <Build Include="Procedures\Books\AddBook.sql" />
     <Build Include="Procedures\Books\UpdateBook.sql" />
-    <Build Include="Procedures\Books\DeleteBook.sql" />
     <Build Include="Procedures\Users\Login.sql" />
     <Build Include="Procedures\Users\Register.sql" />
     <Build Include="Procedures\Users\UpdateUser.sql" />
     <Build Include="Procedures\Authors\AddAuthor.sql" />
     <Build Include="Procedures\Authors\UpdateAuthor.sql" />
-    <Build Include="Procedures\Authors\DeleteAuthor.sql" />
     <Build Include="Procedures\Billing\AddBilling.sql" />
     <Build Include="Procedures\Category\AddCategory.sql" />
     <Build Include="Procedures\Category\UpdateCategory.sql" />
+    <Build Include="Views\V_Book.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DB_BibliLivre.refactorlog" />

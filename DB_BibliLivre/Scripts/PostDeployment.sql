@@ -9,10 +9,36 @@ Modèle de script de post-déploiement
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-EXEC DB_BibliLivre.dbo.Register @LastName = 'Dewinckeleer', @FirstName = 'Rémi', @Email = 'remidwr@gmail.com', @Passwd = 'Test1234=';
+EXEC DB_BibliLivre.dbo.Register 
+    @LastName = 'Dewinckeleer', 
+    @FirstName = 'Rémi',
+    @Email = 'remidwr@gmail.com',
+    @Passwd = 'Test1234=';
 
-EXEC DB_BibliLivre.dbo.AddAuthor @Name = 'Antoine de Saint-Exupéry';
+EXEC DB_BibliLivre.dbo.AddAuthor 
+    @Name = 'Antoine de Saint-Exupéry';
 
-EXEC DB_BibliLivre.dbo.AddCategory @Name = 'Fable';
+EXEC DB_BibliLivre.dbo.AddCategory 
+    @Name = 'Fable';
 
-EXEC DB_BibliLivre.dbo.AddBook @ISBN = '9782070408504', @Name = 'Le Petit Prince', @Price = 3.70, @Description = 'Le Petit Prince', @Image = '', @Edition = 'Gallimard', @Stock = 10, @AuthorName = 'Antoine de Saint-Exupéry', @CategoryName = 'Fable';
+EXEC DB_BibliLivre.dbo.AddBook 
+    @ISBN = '9782070408504',
+    @Name = 'Le Petit Prince', 
+    @Price = 3.70,
+    @Description = 'Le Petit Prince',
+    @Image = '',
+    @Edition = 'Gallimard',
+    @Stock = 10,
+    @AuthorName = 'Antoine de Saint-Exupéry',
+    @CategoryName = 'Fable';
+
+EXEC DB_BibliLivre.dbo.AddBook 
+    @ISBN = '978-2-910188-13-9',
+    @Name = 'L''Alchimiste',
+    @Price = 5.99,
+    @Description = 'L''alchimiste',
+    @Image = '',
+    @Edition = 'Editions Anne Carrière',
+    @Stock = 15,
+    @AuthorName = 'Paulo Coelho',
+    @CategoryName = 'Conte philosophique';
